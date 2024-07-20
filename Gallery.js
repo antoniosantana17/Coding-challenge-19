@@ -24,13 +24,19 @@ const Gallery = () => {
 
   return (
     <div>
-      {tours.map((tour) => (
-        <div key={tour.id}>
-          <h2>{tour.name}</h2>
-          <button onClick={() => setTours(tours.filter(t => t.id !== tour.id))}>Not Interested</button>
-          <p>{tour.info}</p>
-        </div>
-      ))}
+      {tours.map((tour) => {
+        const [showMore, setShowMore] = useState(false);
+        return (
+          <div key={tour.id}>
+            <h2>{tour.name}</h2>
+            <button onClick={() => setTours(tours.filter(t => t.id !== tour.id))}>Not Interested</button>
+            <p>{showMore ? tour.info : `${tour.info.substring(0, 100)}...`}</p>
+            <button onClick={() => setShowMore(!showMore)}>
+              {showMore ? "Show Less" : "Read More"}
+            </button>
+          </div>
+        );
+      })}
     </div>
   );
 };
