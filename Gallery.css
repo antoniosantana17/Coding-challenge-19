@@ -1,0 +1,20 @@
+/* src/Gallery.css */
+.tour {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .tour h2 {
+    margin: 0 0 10px;
+  }
+  
+  .tour p {
+    margin: 0 0 10px;
+  }
+  
+  .tour button {
+    margin-right: 10px;
+  }
+  
