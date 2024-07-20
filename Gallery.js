@@ -42,3 +42,13 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
+// src/Gallery.js
+import React, { useState, useEffect } from 'react';
+import './Gallery.css';
+
+const Gallery = () => {
+  //... (same code as before)
+};
+
+export default Gallery;
